@@ -6,34 +6,75 @@
     <title>주은혜교회</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
         }
         header {
-            background-color: #4CAF50;
+            background: url('images/header-background.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 1em 0;
+            padding: 3em 0;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            position: relative;
+            z-index: 1;
+            font-size: 3em;
+            margin: 0;
         }
         nav {
             display: flex;
             justify-content: center;
             background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 2;
         }
         nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
+            transition: background-color 0.3s, color 0.3s;
         }
         nav a:hover {
             background-color: #ddd;
             color: black;
         }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
         section {
             padding: 20px;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-top: 0;
+        }
+        .recent-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        .recent-images img:hover {
+            transform: scale(1.05);
         }
         footer {
             background-color: #333;
@@ -43,20 +84,6 @@
             position: fixed;
             width: 100%;
             bottom: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: #4CAF50;
-        }
-        .recent-images img {
-            width: 100%;
-            height: auto;
         }
     </style>
 </head>
@@ -74,23 +101,29 @@
     <div class="container">
         <section id="news">
             <h2>교회소식</h2>
-            <p>주은혜교회 입니다 하나님을 사랑하는 사람들이 모여 즐겁게 예배하는 곳입니다.</p>
+            <p>여기에 교회 소식을 입력하세요.</p>
         </section>
         <section id="sermons">
             <h2>설교영상</h2>
             <p>여기에 설교 영상을 삽입하세요.</p>
+            <img src="images/sermon.jpg" alt="설교 영상 이미지">
         </section>
         <section id="images" class="recent-images">
             <h2>최근 이미지</h2>
             <p>여기에 최근 이미지를 삽입하세요.</p>
+            <img src="images/recent1.jpg" alt="최근 이미지 1">
+            <img src="images/recent2.jpg" alt="최근 이미지 2">
+            <img src="images/recent3.jpg" alt="최근 이미지 3">
         </section>
         <section id="worship">
             <h2>예배 안내</h2>
-            <p>주일 오전예배 11시.</p>
+            <p>여기에 예배 안내를 입력하세요.</p>
+            <img src="images/worship.jpg" alt="예배 안내 이미지">
         </section>
         <section id="message">
             <h2>설교말씀</h2>
             <p>여기에 설교 말씀을 입력하세요.</p>
+            <img src="images/message.jpg" alt="설교 말씀 이미지">
         </section>
     </div>
     <footer>
